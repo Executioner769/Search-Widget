@@ -1,0 +1,161 @@
+/* Import Google Font Manrope */
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;500&display=swap");
+
+/* Import Normalize CSS */
+@import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css");
+
+:root {
+    --bg-color1: #8971ea;
+    --bg-color2: #73e600;
+    --bg-color3: #1e90ff;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+    white-space: nowrap; /* added line */
+}
+
+main {
+    font-family: "Manrope", sans-serif;
+    background-color: #2a2a2a;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#search-trigger {
+}
+
+.button {
+    color: #fff;
+    font-size: 2em;
+    height: 2em;
+    width: 2em;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.button:hover,
+.button:focus {
+    background-color: #fff;
+    color: #2a2a2a;
+    outline: 0;
+}
+
+.search-container {
+    /* outline: 1px solid #fff; */
+    z-index: 4;
+    position: relative;
+    top: 10%;
+    left: 25%;
+    width: 50vw;
+    height: 20vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.search-title {
+    position: relative;
+}
+
+.search-title h1 {
+    font-size: 6em;
+    font-weight: 400;
+    color: #fff;
+    margin: 0;
+}
+
+.search-title .close {
+    border-radius: 50%;
+    border: 1px solid #fff;
+    height: 1.3em;
+    width: 1.3em;
+    display: inline;
+    font-size: 1.7em;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 0.5em;
+    top: 0.5em;
+    cursor: pointer;
+}
+
+.search-subtitle p {
+    margin: 0;
+    font-weight: 200;
+    font-size: 1.5em;
+    color: #bbb;
+    margin-top: 1em;
+}
+
+.search-input-box {
+    margin: 0.5em 0em;
+    width: 100%;
+    height: 3em;
+}
+
+.search-input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 0.2em;
+    background-color: #fff;
+    padding: 0.5em;
+    font-size: 1.5em;
+    color: #2a2a2a;
+    outline: none;
+}
+
+.search-input::placeholder {
+    font-weight: 200;
+    color: #bbb;
+}
+
+.overlay-container {
+    font-family: "Manrope", sans-serif;
+    background: #2a2a2a;
+    color: #fff;
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    text-align: left;
+    display: none;
+    opacity: 1;
+}
+
+.overlay-container.active {
+    display: block;
+}
+
+.overlay {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+}
+
+@media (max-width: 768px) {
+    .search-container {
+        width: 100vw;
+        left: 0;
+    }
+}
